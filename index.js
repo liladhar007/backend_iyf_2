@@ -9,6 +9,7 @@
     const migrationRoutes = require("./src/routes/migrationRoutes");
     const taskRoutes = require("./src/routes/taskRoutes");
     const StudentCommentsRoutes = require("./src/routes/StudentCommentsRoutes");
+    const eventsRoutes = require("./src/routes/eventRoutes");
     const db = require("./src/config/db");
 
 
@@ -31,6 +32,7 @@
     app.use("/groupMigration", migrationRoutes);
     app.use("/task", taskRoutes);
     app.use("/comments",StudentCommentsRoutes);
+    app.use("/event",eventsRoutes);
 
 
     app.get('/', (req, res) => {
